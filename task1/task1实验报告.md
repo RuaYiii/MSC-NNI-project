@@ -1,8 +1,14 @@
-# task1
+# Task1入门任务
 
 > by 石基宽(RuaYiii)
+## NNI 体验文档
 
-##安装
+### 1. AutoML 工具比较
+
+鉴于笔者就是一个萌新，所以没怎么用过AutoML工具，这次委实是一次全新的体验
+
+
+### 2.NNI 安装及使用
 
 安装时首次遇到了`ERROR: Command errored out with exit status 1` 的问题
 
@@ -11,10 +17,14 @@
 笔者环境是: 
 
 `Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32`
-
 <img src="img\image-20201204123152120.png" alt="image-20201204123414154" style="zoom:67%;" />
 
-## 示例代码
+### 3.NNI 使用感受 
+
+很爽，web-ui是真的舒服，这就是auto-ML吗，爱了爱了
+## NNI 样例分析文档
+
+### 示例代码
 
 之后笔者由于之前的环境是Tensorflow2，这里没有回滚
 
@@ -22,7 +32,7 @@
 
 我改成了`nnictl create --config nni\examples\trials\mnist-tfv2\config_windows.yml`
 
-## 实验结果
+### 实验结果
 
 测试结果如下：
 
