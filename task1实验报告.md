@@ -12,7 +12,7 @@
 
 `Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32`
 
-![a](img\image-20201204123152120.png)
+<img src="img\image-20201204123152120.png" alt="image-20201204123414154" style="zoom:67%;" />
 
 ## 示例代码
 
@@ -33,7 +33,6 @@
 <img src="img\image-20201204123439559.png" alt="image-20201204123439559" style="zoom:67%;" />
 
 <img src="img\image-20201204123500694.png" alt="image-20201204123439559" style="zoom:67%;" />
-![image-20201204123500694](img\image-20201204123500694.png)
 
 同时也导出了`dispatcher.log` `experiment.json`
 
