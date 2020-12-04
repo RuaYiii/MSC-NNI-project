@@ -1,0 +1,80 @@
+{
+    "experimentParameters": {
+        "id": "mZjrgupn",
+        "revision": 726,
+        "execDuration": 6993,
+        "logDir": "C:\\Users\\hp\\nni-experiments\\mZjrgupn",
+        "nextSequenceId": 21,
+        "params": {
+            "authorName": "NNI Example",
+            "experimentName": "MNIST TF v2.x",
+            "trialConcurrency": 1,
+            "maxExecDuration": 7200,
+            "maxTrialNum": 20,
+            "searchSpace": {
+                "dropout_rate": {
+                    "_type": "uniform",
+                    "_value": [
+                        0.5,
+                        0.9
+                    ]
+                },
+                "conv_size": {
+                    "_type": "choice",
+                    "_value": [
+                        2,
+                        3,
+                        5,
+                        7
+                    ]
+                },
+                "hidden_size": {
+                    "_type": "choice",
+                    "_value": [
+                        124,
+                        512,
+                        1024
+                    ]
+                },
+                "batch_size": {
+                    "_type": "choice",
+                    "_value": [
+                        16,
+                        32
+                    ]
+                },
+                "learning_rate": {
+                    "_type": "choice",
+                    "_value": [
+                        0.0001,
+                        0.001,
+                        0.01,
+                        0.1
+                    ]
+                }
+            },
+            "trainingServicePlatform": "local",
+            "tuner": {
+                "builtinTunerName": "TPE",
+                "classArgs": {
+                    "optimize_mode": "maximize"
+                },
+                "checkpointDir": "C:\\Users\\hp\\nni-experiments\\mZjrgupn\\checkpoint"
+            },
+            "versionCheck": true,
+            "clusterMetaData": [
+                {
+                    "key": "codeDir",
+                    "value": "C:\\Users\\hp\\nni\\examples\\trials\\mnist-tfv2\\."
+                },
+                {
+                    "key": "command",
+                    "value": "python mnist.py"
+                }
+            ]
+        },
+        "startTime": 1607039245718,
+        "endTime": 1607050433545
+    },
+    "trialMessage": []
+}
