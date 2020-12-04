@@ -12,7 +12,7 @@
 
 `Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32`
 
-![image-20201204123152120](\img\image-20201204123152120.png)
+![a](img\image-20201204123152120.png)
 
 ## 示例代码
 
