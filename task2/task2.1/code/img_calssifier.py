@@ -52,7 +52,7 @@ def main():
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device) #事实上就输出了 cuda:0 
-
+    
     transform= transforms.Compose(
         [transforms.ToTensor(),
         transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
