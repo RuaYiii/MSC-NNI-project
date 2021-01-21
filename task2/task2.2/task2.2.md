@@ -40,8 +40,13 @@ localConfig:
 
 `NNI_test.json`:
 
-```
-
+```json
+{  
+    "optimizer":{"_type":"choice", "_value":["SGD", "Adadelta", "Adagrad", "Adam", "Adamax"]},
+    "model":{"_type":"choice", "_value":["vgg", "resnet18", "googlenet", "densenet121", "mobilenet", "dpn92", "senet18"]},
+    "lr": {"_type": "choice", "_value": [0.1, 0.01,0.001,0.0001]},
+    "epochs": {"_type": "choice", "_value":[20,200]}
+}
 ```
 
 
