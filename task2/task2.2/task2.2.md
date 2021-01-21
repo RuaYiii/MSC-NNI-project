@@ -10,10 +10,9 @@
 > - Matplotlib version: 3.2.2 
 > - Torchvision version: 0.7.0
 
-
 ## 配置文件
-`config_windows.yml`:
 
+`config_windows.yml`:
 ```yml
 authorName: RuaYiii
 experimentName: NNi_task2.2
@@ -43,7 +42,7 @@ localConfig:
 ```json
 {  
     "optimizer":{"_type":"choice", "_value":["SGD", "Adadelta", "Adagrad", "Adam", "Adamax"]},
-    "model":{"_type":"choice", "_value":["vgg", "resnet18", "googlenet", "densenet121", "mobilenet", "dpn92", "senet18"]},
+    "model":{"_type":"choice", "_value":["vgg11","vgg13","vgg16", "vgg19"]},
     "lr": {"_type": "choice", "_value": [0.1, 0.01,0.001,0.0001]},
     "epochs": {"_type": "choice", "_value":[20,200]}
 }
