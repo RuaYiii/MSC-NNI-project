@@ -2,7 +2,15 @@
 
 ## 实验环境
 
-> Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+> 实验环境: 
+> - System: windows10
+> - NNI version: 1.9
+> - Python version: 3.8.3
+> - Pytorch version: 1.6.0
+> - Tensorflow version: 2.3.0
+> - Numpy version: 1.18.5
+> - Matplotlib version: 3.2.2 
+> - Torchvision version: 0.7.0
 
 ```python
 import torch 

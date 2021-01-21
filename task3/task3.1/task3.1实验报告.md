@@ -6,11 +6,16 @@
 
 ## 本机运行实验配置
 
-> nni版本：1.9
->
-> Python： 3.8.3
->
-> 
+> 实验环境: 
+> - System: windows10
+> - NNI version: 1.9
+> - Python version: 3.8.3
+> - Pytorch version: 1.6.0
+> - Tensorflow version: 2.3.0
+> - Numpy version: 1.18.5
+> - Matplotlib version: 3.2.2 
+> - Torchvision version: 0.7.0
+
 
 `config.yml`:
 

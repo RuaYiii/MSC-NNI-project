@@ -15,8 +15,17 @@
 仔细检查后发现了`Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/`这条消息，于是在安装了mvc++更高版本后安装成功（使用`python -m pip install --upgrade nni`）
 
 笔者环境是: 
+ 
+> - System: windows10
+> - NNI version: 1.9
+> - Python version: 3.8.3
+> - Pytorch version: 1.6.0
+> - Tensorflow version: 2.3.0
+> - Numpy version: 1.18.5
+> - Matplotlib version: 3.2.2 
+> - Torchvision version: 0.7.0
+ 
 
-`Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32`
 <img src="img\image-20201204123152120.png" alt="image-20201204123414154" style="zoom:67%;" />
 
 ### 3.NNI 使用感受 
