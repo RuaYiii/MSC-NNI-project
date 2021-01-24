@@ -60,5 +60,31 @@ localConfig:
 
 
 
-
 ##结果展示
+
+```
+{'optimizer': 'Adam', 'model': 'vgg16', 'lr': 0.001, 'epochs': 200}
+bestacc: 92.26
+```
+
+	{'optimizer': 'Adam', 'model': 'vgg19', 'lr': 0.001, 'epochs': 200}
+	bestacc: 92.09
+
+```
+{'optimizer': 'Adam', 'model': 'vgg13', 'lr': 0.001, 'epochs': 200}
+bestacc: 92.38
+```
+
+```
+{'optimizer': 'Adam', 'model': 'vgg11', 'lr': 0.001, 'epochs': 200}
+bestacc: 90.5
+```
+
+{'optimizer': 'SGD', 'model': 'vgg16', 'lr': 0.001, 'epochs': 200}
+bestacc: 90.32
+
+{'optimizer': 'SGD', 'model': 'vgg19', 'lr': 0.001, 'epochs': 200}
+bestacc: 90.42
+
+{'optimizer': 'Adamax', 'model': 'vgg16', 'lr': 0.005, 'epochs': 200}
+bestacc: 92.02
