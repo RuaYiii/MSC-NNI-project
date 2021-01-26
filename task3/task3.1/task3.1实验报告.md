@@ -1,6 +1,6 @@
 # Task3.1实验报告
 
-# 关于特征工程：
+## 关于特征工程：
 
 > 特征工程是使用领域知识通过数据挖掘技术从原始数据中提取特征的过程。这些功能可用于提高机器学习算法的性能。可以将特征工程视为应用机器学习本身
 > 目的是最大限度地从原始数据中提取特征以供算法和模型使用
@@ -9,14 +9,16 @@
 
 > 实验环境: 
 > - System: windows10
-> - NNI version: 1.9
+> - NNI version: 2.0
 > - Python version: 3.8.3
 > - Pytorch version: 1.6.0
 > - Tensorflow version: 2.3.0
 > - Numpy version: 1.18.5
 > - Matplotlib version: 3.2.2 
 > - Torchvision version: 0.7.0
+> - Pandas version 1.0.5
 
+> 值得注意的是：原示例程序使用了旧版本pandas的api，若使用**0.25**版本的pandas就直接可以，当然也可以对`fe_util.py`进行少许改动即刻成功运行（这里笔者采用了后者）
 
 `config.yml`:
 
@@ -24,7 +26,7 @@
 authorName: default
 experimentName: example-auto-fe
 trialConcurrency: 1
-maxExecDuration: 10h
+maxExecDuration: 1h
 maxTrialNum: 2000
 #choice: local, remote
 trainingServicePlatform: local
@@ -76,42 +78,44 @@ trial:
 }
 ```
 
-
-
 ## 实验代码
 
 `main.py`:
 
 ```python
-
 import nni
-import logging
-import numpy as np
-import pandas as pd
-import json
-from fe_util import *
-from model import *
+
 if __name__ == '__main__':
-    file_name = 'train.tiny.csv'
-    target_name = 'Label'
-    id_index = 'Id# get parameters from tuner
+    file_name = "train.tiny.csv"
+    target_name = "Label"
+    id_index = "Id"
 	RECEIVED_PARAMS = nni.get_next_parameter()
 	logger.info("Received params:\n", RECEIVED_PARAMS)
 
-# list is a column_name generate from tuner
 	df = pd.read_csv(file_name)
 	if 'sample_feature' in RECEIVED_PARAMS.keys():
     	sample_col = RECEIVED_PARAMS['sample_feature']
 	else:
     	sample_col = []
 
-# raw feaure + sample_feature
     df = name2feature(df, sample_col, target_name)
     feature_imp, val_score = lgb_model_train(df,  _epoch = 1000, target_name = target_name, id_index = id_index)
+    
     nni.report_final_result({
         "default":val_score, 
         "feature_importance":feature_imp
     })
 ```
 
-## 结果展示
+
+
+## 实验效果
+
+> 如图
+
+![image-20210126221628132](img\image-20210126221628132.png)
+
+![image-20210126221652734](img\image-20210126221652734.png)
+
+
+
