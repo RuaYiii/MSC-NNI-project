@@ -47,13 +47,13 @@
 
 测试结果如下：
 
-<img src="img\image-20201204123414154.png" alt="image-20201204123414154" style="zoom:67%;" />
+<img src="img/image-20201204123414154.png" alt="image-20201204123414154" style="zoom:67%;" />
 
-<img src="img\image-20201204123429165.png" alt="image-20201204123429165" style="zoom:67%;" />
+<img src="img/image-20201204123429165.png" alt="image-20201204123429165" style="zoom:67%;" />
 
-<img src="img\image-20201204123439559.png" alt="image-20201204123439559" style="zoom:67%;" />
+<img src="img/image-20201204123439559.png" alt="image-20201204123439559" style="zoom:67%;" />
 
-<img src="img\image-20201204123500694.png" alt="image-20201204123439559" style="zoom:67%;" />
+<img src="img/image-20201204123500694.png" alt="image-20201204123439559" style="zoom:67%;" />
 
 同时也导出了`dispatcher.log` `experiment.json`
 
