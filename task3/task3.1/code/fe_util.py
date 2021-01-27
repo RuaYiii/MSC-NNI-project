@@ -100,9 +100,12 @@ def crosscount(df, col_list):
 
 def aggregate(df, num_col, col, stat_list = AGGREGATE_TYPE):
     agg_dict = {}
+    agg_dict_list= []   #为了兼容旧版本的pandas api
     for i in stat_list:
         agg_dict['AGG_{}_{}_{}'.format(i, num_col, col)] = i
-    agg_result = df.groupby([col])[num_col].agg(agg_dict)
+    for i in agg_dict:
+        agg_dict_list.append((i,agg_dict[i]))
+    agg_result = df.groupby([col])[num_col].agg(agg_dict_list)
     r = left_merge(df, agg_result, on = [col])
     df = concat([df, r])
     return df
