@@ -124,5 +124,3 @@ RuntimeError: CUDA out of memory. Tried to allocate 120.00 MiB (GPU 0; 4.00 GiB 
 ```
 
 ```
-
-![image-20210127102533003](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20210127102533003.png)
