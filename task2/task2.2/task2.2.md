@@ -100,17 +100,23 @@ bestacc: 92.26
 googlenet的表现：
 
 ```
-RuntimeError: CUDA out of memory. Tried to allocate 120.00 MiB (GPU 0; 4.00 GiB total capacity; 2.72 GiB already allocated; 54.61 MiB free; 2.84 GiB reserved in total by PyTorch)
+{'optimizer': 'Adam', 'model': 'googlenet', 'lr': 0.01, 'epochs': 200}
+best train acc: 99.604
+best test acc: 92.8
 ```
 
-**非常遗憾，没跑起来** 
+ densenet的表现：
 
+```
+{'optimizer': 'Adam', 'model': 'densenet121', 'lr': 0.001, 'epochs': 200}
+best train acc: 99.79599999999999
+best test acc: 93.78
 ```
 
 ```
-
-```
-
+{'optimizer': 'Adam', 'model': 'densenet169', 'lr': 0.001, 'epochs': 200}
+best train acc: 99.8
+best test acc: 93.82
 ```
 
 ```
