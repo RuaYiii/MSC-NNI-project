@@ -187,7 +187,7 @@ if __name__ == "__main__":
         "model":"densenet201",
         "lr":0.001,
         "epochs":200,
-        "batch_size":32} #单次的试验
+        "batch_size":32} #为了测试本机可用的最大batch————单纯是因为机子太烂了
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--epochs", type=int, default=200)
@@ -201,6 +201,6 @@ if __name__ == "__main__":
     print(f"best train acc: {train_acc}")
     print(f"best test acc: {test_acc}")
     nni.report_final_result(end)
-    print("OK")
+    #print("OK")
 
 
