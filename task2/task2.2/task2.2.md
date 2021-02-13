@@ -73,7 +73,7 @@ parser = argparse.ArgumentParser()
 
 ## 结果展示:
 
-> 鉴于本机低劣的内存和显卡的性能限制，googlenet的batch_size为64，densenet的batch_size为32————仅为笔者在实验中跑程序只用
+> 鉴于本机低劣的内存和显卡的性能限制，googlenet的batch_size为64，densenet的batch_size为32————仅为笔者在实验中跑程序之用
 
 vgg模型下表现：
 
