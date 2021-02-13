@@ -47,10 +47,10 @@ def prepare(args):
     ])
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=32, shuffle=True)
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=args["batch_size"], shuffle=True)
 
     testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=50, shuffle=False)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=args["batch_size"], shuffle=False)
     
     if args["model"] == "vgg11":
         net = VGG("VGG11")
@@ -186,7 +186,8 @@ if __name__ == "__main__":
         "optimizer":"Adam",
         "model":"densenet201",
         "lr":0.001,
-        "epochs":200} #单次的试验
+        "epochs":200,
+        "batch_size":32} #单次的试验
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--epochs", type=int, default=200)
