@@ -57,12 +57,43 @@
 ---   
 ## 数据预处理
 
-对于原始数据，我们预先对Descript、Resolution、Address列暂时去除————处于其种类过多的考虑，同时对DayOfWeek、PdDistrict进行了onehot处理；对经纬度X、Y进行了标准化
+对于原始数据，我们预先对Descript、Resolution、Address列暂时去除————处于其种类过多的考虑，同时对PdDistrict进行了onehot处理/整数标签处理 ：BAYVIEW  CENTRAL  INGLESIDE  MISSION  NORTHERN  PARK  RICHMOND  SOUTHERN  TARAVAL  TENDERLOIN 顺带一提是这几个
+； 对经纬度X、Y进行了标准化
+
 
 ## 数据编码方式的处理
 
 对于时间型数据Dates，我们将其分解为Year,Month,Day,Hours四列数据，其他数值型的数据全部astype为float
+对于字符串数据DayOfWeek的星期X的单词替换成了0-6
 
 ## 实验结果
 
+首先明确：**我们预测罪名种类（39种）**————瞎猜猜中的概率就是大概2.56%
+最后的正确概率是 0.1988 (看起来效果确确实实不是很好)————毕竟我们之间把特征交上去了，**当然可能也是我们的模型的问题**————但是特征工程考虑的是数据的处理，所以我们就将此次结果暂且当作对比参展的一个标准
+我们进行了以下实验(按时间顺序进行)：
+- PdDistrict对于进行数字索引：0.1988  |进行onehot：0.2066【之后实验都选取onehot】
+- 对于经纬度这个特征增加权重：0.2080| 当然权重过大就过拟合了【现在加×10权重】
+- 加入minute————事实上很有效：0.2325|照着这思路进行对时间数据的进一步处理
+- 去除year————有一定的改进效果：0.2334|略有提升 
+- 把month,day,hour,minute统一标准且加大了权重，并且加大epoch(20->30):0.2360| 让我们加大epoch
+- 加到50 ：0.2361|怀疑极大程度上是巧合，加到200：0.2328 ————epoch继续是50罢
+- 引入特征f_1，一个基于时间的综合数据 :0.2340 | 效果并不好，考虑删掉
+- 扩大模型规模：0.2364
+- 
 
+当我们引入NNI
+```
+from nni.feature_engineering.gradient_selector import FeatureGradientSelector
+
+# 读取数据
+
+```
+from nni.feature_engineering.gradient_selector import FeatureGradientSelector
+# 初始化 Selector
+fgs = FeatureGradientSelector()
+# 拟合数据
+fgs.fit(X_train, y_train)
+# 获取重要的特征
+# 此处会返回重要特征的索引。
+print(fgs.get_selected_features())
+``` 
