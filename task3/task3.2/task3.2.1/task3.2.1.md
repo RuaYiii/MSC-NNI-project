@@ -8,7 +8,8 @@
 > 别注意数据预处理、数据编码方式、高阶特征挖掘和基于其他分类的的特征提取等问题。这些问题有些已经有了成熟的解决方案，有些值得我们去挖掘研究。如果能够在处理的时候考虑到它们，可以更加完善和丰富自动特征工程的功能。
 >   - 典型问题的特征搜索空间的设计：对于不同领域，特征的搜索空间可能有很大的差别。例如，对于 CTR 预估这个问题来说，N阶交叉特征可能起到比较重要作用；对于时间序列预测问题来说，时间相关的特征可能起比较重要的作用。为不同领域设计特征搜索的空间，并提供相关特征抽取的模块，是一件非常有意义的事情。
 
-**在本项目中选择了：旧金山犯罪分类：San Francisco Crime Classification** 这个任务
+**在本项目的详细记录是：
+旧金山犯罪分类：**San Francisco Crime Classification** 这个任务 
 
 ## 原始数据
 
@@ -57,9 +58,9 @@
 ---   
 ## 数据预处理
 
-对于原始数据，我们预先对Descript、Resolution、Address列暂时去除————处于其种类过多的考虑，同时对PdDistrict进行了onehot处理/整数标签处理 ：BAYVIEW  CENTRAL  INGLESIDE  MISSION  NORTHERN  PARK  RICHMOND  SOUTHERN  TARAVAL  TENDERLOIN 顺带一提是这几个
-； 对经纬度X、Y进行了标准化
+对于原始数据，我们预先对Descript、Resolution、Address列暂时去除————处于其种类过多的考虑，同时对PdDistrict进行了onehot处理/整数标签处理 ：BAYVIEW  CENTRAL  INGLESIDE  MISSION  NORTHERN  PARK  RICHMOND  SOUTHERN  TARAVAL  TENDERLOIN 顺带一提是这几个 | 对经纬度X、Y进行了标准化
 
+> 注意：这个预处理是我们最初的处理，并没有把
 
 ## 数据编码方式的处理
 
