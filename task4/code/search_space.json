@@ -1,0 +1,45 @@
+{
+    "g_ch": {
+        "_type": "choice",
+        "_value": [
+            16,
+            32,
+            64
+        ]
+    },
+    "d_ch": {
+        "_type": "choice",
+        "_value": [
+            16,
+            32,
+            64
+        ]
+    },
+    "start_lr": {
+        "_type": "choice",
+        "_value": [
+            0.0001,
+            0.0002,
+            0.0005,
+            0.001
+        ]
+    },
+    "lmbda": {
+        "_type": "choice",
+        "_value": [
+            0.5,
+            1.0,
+            5.0,
+            10.0
+        ]
+    },
+    "idt_coef": {
+        "_type": "choice",
+        "_value": [
+            0.5,
+            1.0,
+            5.0,
+            10.0
+        ]
+    }
+}

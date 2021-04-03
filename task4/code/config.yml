@@ -1,0 +1,18 @@
+authorName: default
+experimentName: Cycle_Gan
+trialConcurrency: 1
+maxExecDuration: 3h
+maxTrialNum: 10
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+useAnnotation: false
+tuner:
+  builtinTunerName: TPE
+  classArgs:
+    optimize_mode: minimize
+trial:
+  command: python Cycle_Gan.py
+  codeDir: .
+  gpuNum: 1
+localConfig:
+  useActiveGpu: true
